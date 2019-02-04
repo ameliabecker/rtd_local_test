@@ -1,3 +1,12 @@
+VM Setup
+========
+
+RTD on "Custom Installs"
+------------------------
+
+`local VM Install from RTD: <https://docs.readthedocs.io/en/latest/custom_installs/local_rtd_vm.html>`_
+
+
 Setting up your login with root access
 ---------------------------------------
 
@@ -107,7 +116,7 @@ cd readthedocs.org
 
 
 TBD
-===
+---
 
 
 # sudo pip install Django==1.11.18

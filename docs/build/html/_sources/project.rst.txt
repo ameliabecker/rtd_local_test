@@ -1,6 +1,12 @@
 Project Overview
 ================
 
+Creating a new Sphinx Project
+-----------------------------
+
+`Sphinx Quickstart <https://docs.readthedocs.io/en/latest/intro/getting-started-with-sphinx.html>`_
+
+
 In Local Environment
 --------------------
 
@@ -21,9 +27,9 @@ In Local Environment
 Setup VM
 --------
 
-See VMware setup page `here`_.
+See `VMware Setup`_ page
 
-.. _here: vmwaresetup.html
+.. _VMWare Setup: vmwaresetup.html
 
 
 Setup Lab Environments
@@ -36,3 +42,4 @@ Setup Lab Environments
 Create Containers
 -----------------
 
+See :ref:`usingdocker`.

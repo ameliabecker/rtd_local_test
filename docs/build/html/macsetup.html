@@ -16,7 +16,7 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Setting up your login with root access" href="vmwaresetup.html" />
+    <link rel="prev" title="VM Setup" href="vmwaresetup.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -60,6 +60,24 @@
 <p><code class="docutils literal notranslate"><span class="pre">CFLAGS=-I/usr/local/opt/libxml2/include/libxml2</span> <span class="pre">\</span>
 <span class="pre">LDFLAGS=-L/usr/local/opt/libxml2/lib</span> <span class="pre">\</span>
 <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
+<p>Clone the repository somewhere on your disk and enter to the repository:</p>
+<p><cite>git clone https://github.com/rtfd/readthedocs.org.git</cite>
+<cite>cd readthedocs.org</cite></p>
+<p>Create a virtual environment and activate it:</p>
+<p>virtualenv venv
+source venv/bin/activate
+Next, install the dependencies using pip (make sure you are inside of the virtual environment):</p>
+<p>pip install -r requirements.txt
+This may take a while, so go grab a beverage. When it’s done, build the database:</p>
+<p>python manage.py migrate
+Then create a superuser account for Django:</p>
+<p>python manage.py createsuperuser
+Now let’s properly generate the static assets:</p>
+<p>python manage.py collectstatic
+Now you can optionally load a couple users and test projects:</p>
+<p>python manage.py loaddata test_data</p>
+<p>python manage.py runserver
+Visit <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> in your browser to see how it looks; you can use the admin interface via <a class="reference external" href="http://127.0.0.1:8000/admin">http://127.0.0.1:8000/admin</a> (logging in with the superuser account you just created).</p>
 </div>
 </div>
 
@@ -80,11 +98,9 @@
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="project.html">Project Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vmwaresetup.html">Setting up your login with root access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vmwaresetup.html#installing-things">Installing things</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vmwaresetup.html">VM Setup</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Macbook Setup</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rtd-online">RTD Online</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rtd-locally">RTD Locally</a></li>
@@ -96,7 +112,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="vmwaresetup.html" title="previous chapter">Setting up your login with root access</a></li>
+      <li>Previous: <a href="vmwaresetup.html" title="previous chapter">VM Setup</a></li>
   </ul></li>
 </ul>
 </div>

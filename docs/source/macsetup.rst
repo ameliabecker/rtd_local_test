@@ -36,3 +36,25 @@ Clone the repository somewhere on your disk and enter to the repository:
 `git clone https://github.com/rtfd/readthedocs.org.git`
 `cd readthedocs.org`
 
+Create a virtual environment and activate it:
+
+virtualenv venv
+source venv/bin/activate
+Next, install the dependencies using pip (make sure you are inside of the virtual environment):
+
+pip install -r requirements.txt
+This may take a while, so go grab a beverage. When it's done, build the database:
+
+python manage.py migrate
+Then create a superuser account for Django:
+
+python manage.py createsuperuser
+Now let's properly generate the static assets:
+
+python manage.py collectstatic
+Now you can optionally load a couple users and test projects:
+
+python manage.py loaddata test_data
+
+python manage.py runserver
+Visit http://127.0.0.1:8000/ in your browser to see how it looks; you can use the admin interface via http://127.0.0.1:8000/admin (logging in with the superuser account you just created).

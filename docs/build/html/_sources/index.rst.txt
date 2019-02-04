@@ -1,24 +1,19 @@
-.. Local RTD Docs and Guides documentation master file, created by
-   sphinx-quickstart on Thu Jan 31 11:20:44 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Local RTD Docs and Guides
 =====================================================
 
+`Installation docs <https://docs.readthedocs.io/en/latest/install.html>`_
+
+`More RST/Sphinx/Sublime/Github help <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/>`_
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-   
+
+
    project.rst
    vmwaresetup.rst
    macsetup.rst
+   usingdocker.rst
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
