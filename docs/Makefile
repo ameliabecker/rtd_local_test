@@ -17,3 +17,29 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+
+SPHINXAUTOBUILD = sphinx-autobuild
+
+ALLSPHINXLIVEOPTS   = $(ALLSPHINXOPTS) -q \
+   -p 0 \
+   -H 0.0.0.0 \
+   -B \
+   --delay 1 \
+   -i "*.swp" \
+   -i "*.pdf" \
+   -i "*.log" \
+   -i "*.out" \
+   -i "*.toc" \
+   -i "*.aux" \
+   -i "*.idx" \
+   -i "*.ind" \
+   -i "*.ilg" \
+   -i "*.tex" \
+   --watch source
+
+.PHONY: livehtml
+livehtml:
+	$(SPHINXAUTOBUILD) -b html $(ALLSPHINXLIVEOPTS) "$(SOURCEDIR)" "$(BUILDDIR)"
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)."

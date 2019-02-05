@@ -24,6 +24,15 @@ In Local Environment
 .. _Mac Setup: macsetup.html
 	
 
+#. Misc local:
+
+   * `Sublime Package Management`_
+   * `Sphinx Setup`_
+     
+.. _Sublime Package Management: sublimepkgmgmt.html
+.. _Sphinx Setup: sphinxsetup.html
+
+
 Setup VM
 --------
 

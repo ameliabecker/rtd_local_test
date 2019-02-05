@@ -1,25 +1,58 @@
-Setting up RHEL 7.4 VMWare Fusion for RTD project:
+VM Setup
+========
 
-$ su -
-> (password default configured as root)
+RTD on "Custom Installs"
+------------------------
 
-# visudo
->## Allows people in group wheel to run all commands
-> uncomment “# % wheel”
-
-
-# user mod -aG wheel abecker
-
-#subscription-manager with joono.hong-+n@secunetics,com
+`local VM Install from RTD: <https://docs.readthedocs.io/en/latest/custom_installs/local_rtd_vm.html>`_
 
 
-Installing things:
+Setting up your login with root access
+---------------------------------------
 
-# subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+Change to root user:
 
-yum list all | % helpful for listing some things
+ ``$ su``
+ ``> (password default configured as root)``
 
-# yum install wget
+
+Edit group "wheel":
+ | # visudo
+ | > ## Allows people in group wheel to run all commands
+ | > # % wheel
+
+.. code-block:: language
+
+	# visudo
+	## Allows people in group wheel to run all commands
+	> # % wheel
+
+uncomment “# % wheel”
+
+
+
+Add your username to the wheel group:
+
+ `# user mod -aG wheel <username>`
+
+Get subscription manager for RHLE:
+
+ `# subscription-manager with joono.hong-+n@secunetics,com`
+
+ | includes other user passwords
+
+
+Installing things
+------------------
+
+Enable RHEL repos 
+ | `# subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"`
+
+To check the available repos:
+ | `# yum list all`
+
+install "Wget"
+ | # yum install wget
 
 # yum update
   % takes a very long time XP
@@ -84,6 +117,16 @@ $ sudo git clone https://github.com/rtfd/readthedocs.org.git
 cd readthedocs.org
 
 # pip install --upgrade pip
+
+
+
+TBD
+---
+
+
+``!``
+Allen says use yum
+
 
 # sudo pip install Django==1.11.18
 

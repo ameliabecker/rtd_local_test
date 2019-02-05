@@ -7,7 +7,7 @@ Local RTD Docs and Guides
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
 
    project.rst
