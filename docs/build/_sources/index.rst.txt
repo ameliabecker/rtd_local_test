@@ -5,7 +5,9 @@ Local RTD Docs and Guides
 
 `More RST Sphinx Sublime Github help <https://sublime-and-sphinx-guide.readthedocs.io/en/latest/>`_
 
-Some new text
+Testing github version
+
+
 
 .. toctree::
    :maxdepth: 3
@@ -14,6 +16,8 @@ Some new text
    vmwaresetup.rst
    macsetup.rst
    usingdocker.rst
+   sphinxsetup.rst
+   sublimepkgmgmt.rst
 
 * :ref:`search`
 

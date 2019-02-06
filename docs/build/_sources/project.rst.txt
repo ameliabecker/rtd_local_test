@@ -29,6 +29,7 @@ In Local Environment
 
    * `Sublime Package Management`_
    * `Sphinx Setup`_
+   * `GitLab Runner Setup on Mac <https://docs.gitlab.com/runner/install/osx.html>`_
      
 .. _Sublime Package Management: sublimepkgmgmt.html
 .. _Sphinx Setup: sphinxsetup.html
