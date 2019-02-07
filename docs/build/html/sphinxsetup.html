@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>&lt;no title&gt; &#8212; Local RTD Docs and Guides 0.0.1 documentation</title>
+    <title>Setting up Sphinx &#8212; Local RTD Docs and Guides 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -16,6 +16,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sublime Package Management" href="sublimepkgmgmt.html" />
+    <link rel="prev" title="Using Docker" href="usingdocker.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,7 +34,45 @@
 
           <div class="body" role="main">
             
-  <p>sphinxsetup.rst</p>
+  <div class="section" id="setting-up-sphinx">
+<h1>Setting up Sphinx<a class="headerlink" href="#setting-up-sphinx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="easy-sphinx-setup">
+<h2>Easy Sphinx Setup<a class="headerlink" href="#easy-sphinx-setup" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://docs.readthedocs.io/en/latest/intro/getting-started-with-sphinx.html">ezsphinx</a></p>
+</div>
+<div class="section" id="sphinx-automatic-html-updates">
+<h2>Sphinx Automatic HTML Updates<a class="headerlink" href="#sphinx-automatic-html-updates" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://sublime-and-sphinx-guide.readthedocs.io/en/latest/build.html">autogen</a></p>
+<p>Add this text to the Makefile:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>SPHINXAUTOBUILD = sphinx-autobuild
+
+ALLSPHINXLIVEOPTS   = $(ALLSPHINXOPTS) -q \
+        -p 0 \
+        -H 0.0.0.0 \
+        -B \
+        --delay 1 \
+        -i &quot;*.swp&quot; \
+        -i &quot;*.pdf&quot; \
+        -i &quot;*.log&quot; \
+        -i &quot;*.out&quot; \
+        -i &quot;*.toc&quot; \
+        -i &quot;*.aux&quot; \
+        -i &quot;*.idx&quot; \
+        -i &quot;*.ind&quot; \
+        -i &quot;*.ilg&quot; \
+        -i &quot;*.tex&quot; \
+        --watch source
+
+.PHONY: livehtml
+livehtml:
+        $(SPHINXAUTOBUILD) -b html $(ALLSPHINXLIVEOPTS) &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot;
+        @echo
+        @echo &quot;Build finished. The HTML pages are in $(BUILDDIR).&quot;
+</pre></div>
+</div>
+<p>use <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code> to stop server</p>
+</div>
+</div>
 
 
           </div>
@@ -51,17 +91,25 @@
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="project.html">Project Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vmwaresetup.html">VM Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macsetup.html">Macbook Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usingdocker.html">Using Docker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting up Sphinx</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#easy-sphinx-setup">Easy Sphinx Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx-automatic-html-updates">Sphinx Automatic HTML Updates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sublimepkgmgmt.html">Sublime Package Management</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usingdocker.html" title="previous chapter">Using Docker</a></li>
+      <li>Next: <a href="sublimepkgmgmt.html" title="next chapter">Sublime Package Management</a></li>
   </ul></li>
 </ul>
 </div>

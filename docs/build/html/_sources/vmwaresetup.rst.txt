@@ -12,15 +12,20 @@ Setting up your login with root access
 
 Change to root user:
 
- `$ su`
-
- `> (password default configured as root)`
+ ``$ su``
+ ``> (password default configured as root)``
 
 
 Edit group "wheel":
  | # visudo
  | > ## Allows people in group wheel to run all commands
  | > # % wheel
+
+.. code-block:: language
+
+	# visudo
+	## Allows people in group wheel to run all commands
+	> # % wheel
 
 uncomment “# % wheel”
 
@@ -117,6 +122,10 @@ cd readthedocs.org
 
 TBD
 ---
+
+
+``!``
+Allen says use yum
 
 
 # sudo pip install Django==1.11.18

@@ -44,9 +44,8 @@
 <h2>Setting up your login with root access<a class="headerlink" href="#setting-up-your-login-with-root-access" title="Permalink to this headline">¶</a></h2>
 <p>Change to root user:</p>
 <blockquote>
-<div><p><cite>$ su</cite></p>
-<p><cite>&gt; (password default configured as root)</cite></p>
-</div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">su</span></code>
+<code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">(password</span> <span class="pre">default</span> <span class="pre">configured</span> <span class="pre">as</span> <span class="pre">root)</span></code></div></blockquote>
 <dl class="docutils">
 <dt>Edit group “wheel”:</dt>
 <dd><div class="first last line-block">
@@ -56,6 +55,11 @@
 </div>
 </dd>
 </dl>
+<div class="highlight-language notranslate"><div class="highlight"><pre><span></span># visudo
+## Allows people in group wheel to run all commands
+&gt; # % wheel
+</pre></div>
+</div>
 <p>uncomment “# % wheel”</p>
 <p>Add your username to the wheel group:</p>
 <blockquote>
@@ -133,6 +137,8 @@ cd readthedocs.org</p>
 </div>
 <div class="section" id="tbd">
 <h2>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">!</span></code>
+Allen says use yum</p>
 <p># sudo pip install Django==1.11.18</p>
 <p>Virtualenv??</p>
 <p>Pip install -r requirements.txt</p>
@@ -167,6 +173,8 @@ cd readthedocs.org</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="macsetup.html">Macbook Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usingdocker.html">Using Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinxsetup.html">Setting up Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sublimepkgmgmt.html">Sublime Package Management</a></li>
 </ul>
 
 <div class="relations">

@@ -27,9 +27,11 @@ Check versions/download these:
 
 nav to readthedocs.org folder
 
-``CFLAGS=-I/usr/local/opt/libxml2/include/libxml2 \
-LDFLAGS=-L/usr/local/opt/libxml2/lib \
-pip install -r requirements.txt``
+.. code-block:: language
+
+	CFLAGS=-I/usr/local/opt/libxml2/include/libxml2 \
+	LDFLAGS=-L/usr/local/opt/libxml2/lib \
+	pip install -r requirements.txt
 
 Clone the repository somewhere on your disk and enter to the repository:
 
